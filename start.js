@@ -15,7 +15,8 @@ const fetchMovies = async() => {
     }
 };
 
-fetchMovies();
+//fetchMovies();
+
 const addLikedKeyToMovie = (movies) => {
  //   console.log(movies);
  //   const uppdatedMoviesList = movies.map((movie) => movie.liked = false);
