@@ -1,6 +1,6 @@
 
 console.log("koden är länkad");
-const BASE_URL = "https://ghibliapi.vercel.app//";
+const BASE_URL = "https://ghibliapi.vercel.app/films/";
 
 // få data från API:et
 async function fetchMovies() {

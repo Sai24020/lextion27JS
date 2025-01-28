@@ -1,4 +1,4 @@
-const API_URL = "https://ghibliapi.vercel.app/films/";
+const API_URL = "https://ghibliapi.vercel.app//";
 
 const fetchMovies = async() => {
     try {
