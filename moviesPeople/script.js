@@ -1,6 +1,5 @@
-
 console.log("koden är länkad");
-const BASE_URL = "https://ghibliapi.vercel.app/films/";
+const BASE_URL = "https://ghibliapi.vercel.app/people/";
 
 // få data från API:et
 async function fetchMovies() {
@@ -46,24 +45,22 @@ function renderMoviesToUI(movies) {
     console.log(movies);
     const moviesContainerEl = document.getElementById('movies-container');
     movies.forEach((movie) => {
-        const movieContainerEl = document.createElement('article');
-        // skapa element för bilden
-        const movieImgEl = document.createElement('figure');
-        movieImgEl.style.backgroundImage = `url(${movie.image})`;
-        const rtScoreEl = document.createElement('p');
-        rtScoreEl.innerHTML = `<span class="rt-score">${movie.rt_score}%</span>`;
-        movieImgEl.appendChild(rtScoreEl);
-        // lägg till figure på movieContainerEl
-        movieContainerEl.appendChild(movieImgEl);
-        // lägg till titel och release date på filmkortet
-        const movieTitleEl = document.createElement('h3');
-        movieTitleEl.innerText = movie.title;
-        movieContainerEl.appendChild(movieTitleEl);
-        const releaseDateEl = document.createElement('p');
-        releaseDateEl.innerHTML = movie.release_date;
-        movieContainerEl.appendChild(releaseDateEl);
-
+        const movieEl = document.createElement("article");
+        movieEl.innerHTML = `
+        <figure style="height: 500px; width: 600px; margin-top: 3rem; background-image: films.url(${movie.films.image})" role= "img" aria-label="Movie poster for ${movie.title}">
+        <figcaption style="background-color: black; margin-bottom: 3rem;">
+            <label for="${movie.films.id}">Like people ( ${movie.films} ) </label>
+            <input class="like-checkbox" id="${movie.films.id}" type="checkbox" ${movie.liked ? "checked" : ""}>
+            <p class="movie-container__rtScore">Kön: ${movie.gender} och Ålder: ${movie.age}</p>
+        </figcaption>
+        </figure>
+        <h4 class="movie-container__name">Name: ${movie.name}</h4>
+        <p class="movie-container__eyeC"> Eye Color: ${movie.eye_color}</p>
+        <p class="movie-container__hairC"> Hair color: ${movie.hair_color}</p>
+        <p class="movie-container__like"> Film länk: ${movie.films}</p>
+        
+        `;
         // till sist lägger vi till nya elementet i vår HTML
-        moviesContainerEl.appendChild(movieContainerEl);
+        moviesContainerEl.appendChild(movieEl);
     });
 };

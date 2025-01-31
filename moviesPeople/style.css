@@ -111,8 +111,12 @@ h2
         color: white;
         width: fit-content;
         padding: 1rem;
-        cursor: pointer;
+    
         border-radius: 35px;
+        li {
+            cursor: pointer;
+          color: #c82333;
+        }
         &:hover {
             transform: scale(1.03);
             transition: transform 0.2s;
@@ -120,12 +124,12 @@ h2
 
         figure {
             margin: 0;
-            height: 350px;
-            width: 250px;
+            height: 150px;
+            width: 150px;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-
+            cursor: pointer;
             p {
                 margin: 0;
 
@@ -141,4 +145,52 @@ h2
             max-width: 250px;
         }
     }
+}
+
+
+.page-buttons {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #5171cf;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+
+}
+
+
+
+
+/*الأزرار */
+.ppBtn {
+    background-color: #4499f4;
+    margin-right: 5px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ppBtn:hover {
+    background-color: #0056b3;
+}
+
+.npBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.npBtn:hover {
+    background-color: #c82333;
 }

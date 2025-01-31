@@ -1,4 +1,4 @@
-const API_URL = "https://ghibliapi.vercel.app//";
+const API_URL = "";
 
 const fetchMovies = async() => {
     try {
@@ -35,17 +35,17 @@ const moviesContainerEl = document.getElementById("movies-container");
     movies.forEach(movie => {
         const movieEl = document.createElement("article");
         movieEl.innerHTML = `
-        <figure style="height: 500px; width: 600px; margin-top: 3rem; background-image: url(${movie.image})" role= "img" aria-label="Movie poster for ${movie.title}">
+        <figure style="height: 500px; width: 600px; margin-top: 3rem; background-image: films.url(${movie.image})" role= "img" aria-label="Movie poster for ${movie.title}">
         <figcaption style="background-color: black; margin-bottom: 3rem;">
-            <label for="${movie.id}">Like ( ${movie.title} ) </label>
+            <label for="${movie.id}">Like people ( ${movie.name} ) </label>
             <input class="like-checkbox" id="${movie.id}" type="checkbox" ${movie.liked ? "checked" : ""}>
-            <p class="movie-container__rtScore">${movie.rt_score} % </p>
+            <p class="movie-container__rtScore">Kön: ${movie.gender} och Ålder: ${movie.age}</p>
         </figcaption>
         </figure>
-        <h4 class="movie-container__title">${movie.original_title}></h4>
-        <p class="movie-container__releaseDate"> Release date: ${movie.release_date}</p>
-          <p class="movie-container__producer"> producer: ${movie.producer}</p>
-          <hr>
+        <h4 class="movie-container__name">Name: ${movie.name}</h4>
+        <p class="movie-container__eyeC"> Eye Color: ${movie.eye_color}</p>
+        <p class="movie-container__hairC"> Hair color: ${movie.hair_color}</p>
+        <p class="movie-container__like"> Films länk: ${movie.films}</p>
         
         `;
         moviesContainerEl.appendChild(movieEl);
