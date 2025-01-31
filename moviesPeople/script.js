@@ -47,7 +47,7 @@ function renderMoviesToUI(movies) {
     movies.forEach((movie) => {
         const movieEl = document.createElement("article");
         movieEl.innerHTML = `
-        <figure style="height: 500px; width: 600px; margin-top: 3rem; background-image: films.url(${movie.image})" role= "img" aria-label="Movie poster for ${movie.title}">
+        <figure style="height: 150px; width: 250px; margin-top: 3rem; background-image: films.url(${movie.image})" role= "img" aria-label="Movie poster for ${movie.title}">
         <figcaption style="background-color: black; margin-bottom: 3rem;">
             <label for="${movie.films.id}">Like people ( ${movie.name} ) </label>
             <input class="like-checkbox" id="${movie.name}" type="checkbox" ${movie.liked ? "checked" : ""}>
