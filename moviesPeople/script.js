@@ -47,17 +47,18 @@ function renderMoviesToUI(movies) {
     movies.forEach((movie) => {
         const movieEl = document.createElement("article");
         movieEl.innerHTML = `
-        <figure style="height: 500px; width: 600px; margin-top: 3rem; background-image: films.url(${movie.films.image})" role= "img" aria-label="Movie poster for ${movie.title}">
+        <figure style="height: 500px; width: 600px; margin-top: 3rem; background-image: films.url(${movie.image})" role= "img" aria-label="Movie poster for ${movie.title}">
         <figcaption style="background-color: black; margin-bottom: 3rem;">
-            <label for="${movie.films.id}">Like people ( ${movie.films} ) </label>
-            <input class="like-checkbox" id="${movie.films.id}" type="checkbox" ${movie.liked ? "checked" : ""}>
+            <label for="${movie.films.id}">Like people ( ${movie.name} ) </label>
+            <input class="like-checkbox" id="${movie.name}" type="checkbox" ${movie.liked ? "checked" : ""}>
             <p class="movie-container__rtScore">Kön: ${movie.gender} och Ålder: ${movie.age}</p>
         </figcaption>
         </figure>
         <h4 class="movie-container__name">Name: ${movie.name}</h4>
         <p class="movie-container__eyeC"> Eye Color: ${movie.eye_color}</p>
         <p class="movie-container__hairC"> Hair color: ${movie.hair_color}</p>
-        <p class="movie-container__like"> Film länk: ${movie.films}</p>
+       
+        <a class="movie-container__like"> Film länk: ${movie.films}</a>
         
         `;
         // till sist lägger vi till nya elementet i vår HTML

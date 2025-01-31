@@ -113,14 +113,17 @@ h2
         padding: 1rem;
     
         border-radius: 35px;
-        li {
-            cursor: pointer;
-          color: #c82333;
-        }
-        &:hover {
-            transform: scale(1.03);
+        a {
+          cursor: pointer;
+          color: #23c828;
+          &:hover {
+            transform: scale(0.93);
             transition: transform 0.2s;
+            background-color: #7117ad;
+            border-radius: 25px;
         }
+        }
+    }
 
         figure {
             margin: 0;
@@ -130,6 +133,11 @@ h2
             background-size: cover;
             background-repeat: no-repeat;
             cursor: pointer;
+            &:hover {
+                transform: scale(0.93);
+                transition: transform 0.2s;
+                background-color: #486a8f;
+            }
             p {
                 margin: 0;
 
@@ -145,7 +153,6 @@ h2
             max-width: 250px;
         }
     }
-}
 
 
 .page-buttons {
