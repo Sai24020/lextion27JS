@@ -4,7 +4,7 @@ let currentMovie = {};
 function onPageLoad() {
     // ta emot parametern från vår url
     const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
+    const id = params.get("movieId");
     console.log(id);
     // hämta filmerna från LS
     moviesFromLS = JSON.parse(localStorage.getItem('all_movies'));
